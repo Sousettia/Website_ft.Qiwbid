@@ -1,0 +1,142 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /*เลื่อนให้ smooth*/
+  box-sizing: border-box; /*กำหนดขนาด browser ให้เท่ากัน*/
+}
+
+:root {
+  /*กำหนดสีเพื่อใช้ในทุกที่*/
+  --main-color: #ffb43a;
+  --hover-color: hsl(37, 94%, 57%);
+  --body-color: #1e1e2a;
+  --container-color: #2d2e37;
+  --text-color: #fcfeff;
+}
+
+a {
+  /*ลบเส้นใต้ลิงก์*/
+  text-decoration: none;
+}
+
+li {
+  /*ลบจุด*/
+  list-style: none;
+}
+section {
+  padding: 3rem 0 2rem; /* Left=3rem Up=0 Right=2rem*/
+}
+
+img {
+  /*inline-size == width กำหนดรูปให้เต็ม*/
+  inline-size: 100%;
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+.bx {
+  cursor: pointer;
+}
+
+.container {
+  max-inline-size: 1060px; /*max-width == max-inline-size */
+  margin: auto;
+  inline-size: 100%; /*inline-size == width กำหนดให้เต็ม*/
+}
+
+.nav {
+  display: flex; /*แสดงผลเป็น flexbox *เรียงแถวลงไป */
+  align-items: center; /*ตั้งไว้กลางซ้ายจอ*/
+  justify-content: center; /*ตั้งไว้กลางจอเลย ทำงานด้วยกันกับ align-items*/
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: uppercase; /*upper lower*/
+  margin: 0 auto 0 0;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.search-box {
+  max-inline-size: 240px; /* Usually 240 - 260 px*/
+  inline-size: 100%; /*for responsive*/
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  padding: 8px 15px;
+  background: var(--container-color);
+  border-radius: 4rem; /*ทำให้ขอบมน*/
+  margin-inline-end: 1rem; /* == margin-right*/
+}
+.search-box .bx {
+  font-size: 1.1rem;
+}
+
+.search-box .bx:hover {
+  color: #ffb43a;
+}
+
+#search-input {
+  inline-size: 100%;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+/* user */
+.user {
+  display: flex;
+}
+
+.user-img {
+  inline-size: 40px;
+  block-size: 40px; /* Height */
+  object-fit: cover; /* ไม่ให้ภาพบีบ */
+  object-position: center; /* ให้เอาตรงกลางเป็นหลัก */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Sticky Navbar || ถ้ามี position จะใช้ top left bottom right */
+  inset-block-start: 50%; /* == Top */
+  transform: translateY(-50%);
+  inset-inline-start: 18px; /* == Left */
+  display: flex; /* ไปสุดจอแล้วขึ้นบรรทัดใหม่ */
+  flex-direction: column; /* Column แนวตั้ง Row แนวนอน*/
+  row-gap: 2.1rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b7b7b7;
+}
+
+.nav-link:hover,
+.nav-active {
+  color: var(--text-color);
+  transition: 0.3 all linear; /* 0.3sec all=ขยายแท็ก i,span linear=ทำให้ไม่พึ่บ */
+  transform: scale(1.1); /* เพิ่มขนาด */
+}
+
+.nav-link .bx{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.nav-link-title{
+  font-size: 0.7rem;
+}

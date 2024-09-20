@@ -4,6 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Respondsive Movies</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/fav-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Movie<span>Max</span></a>
+        <!-- ใส่ใน span เพื่อกำหนดสี -->
+        <div class="search-box">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search Movie..."
+            id="search-input"
+          />
+          <!--Search-Input-->
+          <i class="bx bx-search"></i>
+        </div>
+        <!-- User -->
+        <a href="#" class="user">
+          <img src="/assets/img/user.jpg" alt="#" class="user-img" />
+        </a>
+        <!-- Navber -->
+        <div class="navbar">
+          <a href="#home" class="nav-link nav-active">
+            <i class="bx bx-home" style="color: #ffffff"></i>
+              <span class="nav-link-title">Home</span>
+          </a>
+          <a href="#trending" class="nav-link">
+            <i class='bx bxs-hot' style='color:#ffffff' ></i>
+              <span class="nav-link-title">Trending</span>
+          </a>
+          <a href="#explore" class="nav-link">
+            <i class='bx bx-compass' style='color:#ffffff' ></i>
+              <span class="nav-link-title">Explore</span>
+          </a>
+          <a href="#movies" class="nav-link">
+            <i class='bx bx-camera-movie' style='color:#ffffff' ></i>
+              <span class="nav-link-title">Movies</span>
+          </a>
+          <a href="#favorites" class="nav-link">
+            <i class='bx bxs-book-heart' style='color:#ffffff' ></i>
+              <span class="nav-link-title">Favorites</span>
+          </a>
+          
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
